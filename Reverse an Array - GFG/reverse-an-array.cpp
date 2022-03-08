@@ -17,11 +17,20 @@ int main() {
 	        ans.push_back(x);
 	    }
 	    
-	    for(int i=n-1; i>=0;i--){
+	    int i=0;
+	    int j = n-1;
+	    while(i<j){
+	        int temp = ans[i];
+	        ans[i] = ans[j];
+	        ans[j] = temp;
+	        i++;
+	        j--;
+	    }
+	    
+	    for(int i=0;i<n;i++){
 	        cout << ans[i] << " ";
 	    }
 	    cout << endl;
-	    
 	}
 	return 0;
 }
